@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Ultimate Leagues</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>ULTIMATE LEAGUES</h1>
+
+<div id="menu">
+  <button onclick="startExhibition()">Gösteri Maçı</button>
+  <button onclick="startCareer()">Kariyer</button>
+  <button onclick="startOnline()">Online Maç</button>
+</div>
+
+<div id="formations">
+  <button onclick="changeFormation('4-4-2', selectedTeam)">4-4-2</button>
+  <button onclick="changeFormation('4-3-3', selectedTeam)">4-3-3</button>
+  <button onclick="changeFormation('5-3-2', selectedTeam)">5-3-2</button>
+</div>
+
+<canvas id="gameCanvas"></canvas>
+
+<script src="league.js"></script>
+<script src="formations.js"></script>
+<script src="career.js"></script>
+<script src="tournament.js"></script>
+<script src="stats.js"></script>
+<script src="sound.js"></script>
+<script src="game.js"></script>
+
+</body>
+</html>

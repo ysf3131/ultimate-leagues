@@ -1,0 +1,78 @@
+const canvas = document.getElementById("gameCanvas");
+const ctx = canvas.getContext("2d");
+
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight - 160;
+}
+window.addEventListener("resize", resizeCanvas);
+resizeCanvas();
+
+let selectedTeam = Leagues.superLig[0];
+let currentFormation = "4-4-2";
+let activePlayers = [];
+
+const formationPositions = {
+  GK:[0.5,0.9],
+  RB:[0.85,0.7], CB:[0.5,0.7], LB:[0.15,0.7],
+  RM:[0.8,0.5], CM:[0.5,0.5], LM:[0.2,0.5],
+  RW:[0.8,0.35], LW:[0.2,0.35],
+  ST:[0.5,0.25],
+  RWB:[0.85,0.6], LWB:[0.15,0.6]
+};
+
+function loadTeamToField(team) {
+  activePlayers = [];
+  Formations[currentFormation].forEach((pos, i) => {
+    const p = team.squad.starters[i];
+    const c = formationPositions[pos];
+    activePlayers.push({
+      name: p.name,
+      rating: p.rating,
+      x: c[0] * canvas.width,
+      y: c[1] * canvas.height
+    });
+  });
+}
+
+function drawPlayers() {
+  activePlayers.forEach(p => {
+    ctx.fillStyle = "blue";
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, 10, 0, Math.PI * 2);
+    ctx.fill();
+
+    ctx.fillStyle = "white";
+    ctx.font = "11px Arial";
+    ctx.textAlign = "center";
+    ctx.fillText(p.name, p.x, p.y - 14);
+  });
+}
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  drawPlayers();
+  requestAnimationFrame(draw);
+}
+
+function changeFormation(f, team) {
+  currentFormation = f;
+  loadTeamToField(team);
+}
+
+function startExhibition() {
+  loadTeamToField(selectedTeam);
+  Sounds.playWhistle();
+  draw();
+}
+
+function startCareer() {
+  Career.start(selectedTeam);
+  loadTeamToField(selectedTeam);
+  Sounds.playWhistle();
+  draw();
+}
+
+function startOnline() {
+  alert("Online altyapı hazır");
+}

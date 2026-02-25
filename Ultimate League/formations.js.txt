@@ -1,0 +1,22 @@
+const Formations = {
+  "4-4-2": [
+    "GK",
+    "RB","CB","CB","LB",
+    "RM","CM","CM","LM",
+    "ST","ST"
+  ],
+
+  "4-3-3": [
+    "GK",
+    "RB","CB","CB","LB",
+    "CM","CM","CM",
+    "RW","ST","LW"
+  ],
+
+  "5-3-2": [
+    "GK",
+    "RWB","CB","CB","CB","LWB",
+    "CM","CM","CM",
+    "ST","ST"
+  ]
+};

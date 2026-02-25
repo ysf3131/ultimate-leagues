@@ -1,0 +1,90 @@
+const Leagues = {
+  superLig: [
+    {
+      name: "Fenerbahçe",
+      squad: {
+        starters: [
+          { name: "Livakovic", rating: 84 },
+          { name: "Osayi", rating: 80 },
+          { name: "Djiku", rating: 82 },
+          { name: "Becao", rating: 81 },
+          { name: "Ferdi", rating: 83 },
+          { name: "İsmail", rating: 82 },
+          { name: "Fred", rating: 85 },
+          { name: "Szymanski", rating: 86 },
+          { name: "Cengiz", rating: 84 },
+          { name: "Tadic", rating: 85 },
+          { name: "Dzeko", rating: 87 }
+        ],
+        subs: [
+          { name: "İrfan Can", rating: 79 },
+          { name: "Oosterwolde", rating: 80 },
+          { name: "Krunic", rating: 81 },
+          { name: "Zajc", rating: 80 },
+          { name: "Kent", rating: 79 },
+          { name: "Batshuayi", rating: 82 },
+          { name: "Mert Hakan", rating: 78 },
+          { name: "Samet", rating: 77 }
+        ]
+      }
+    },
+
+    {
+      name: "Galatasaray",
+      squad: {
+        starters: [
+          { name: "Muslera", rating: 84 },
+          { name: "Boey", rating: 83 },
+          { name: "Sanchez", rating: 82 },
+          { name: "Abdulkerim", rating: 81 },
+          { name: "Angelino", rating: 80 },
+          { name: "Torreira", rating: 84 },
+          { name: "Oliveira", rating: 83 },
+          { name: "Mertens", rating: 85 },
+          { name: "Zaha", rating: 85 },
+          { name: "Kerem", rating: 84 },
+          { name: "Icardi", rating: 87 }
+        ],
+        subs: [
+          { name: "Günay", rating: 78 },
+          { name: "Kaan", rating: 79 },
+          { name: "Nelsson", rating: 81 },
+          { name: "Demirbay", rating: 80 },
+          { name: "Ziyech", rating: 83 },
+          { name: "Barış Alper", rating: 82 },
+          { name: "BAY", rating: 80 },
+          { name: "Bakambu", rating: 79 }
+        ]
+      }
+    },
+
+    {
+      name: "Beşiktaş",
+      squad: {
+        starters: [
+          { name: "Mert Günok", rating: 82 },
+          { name: "Rosier", rating: 80 },
+          { name: "Colley", rating: 79 },
+          { name: "Necip", rating: 78 },
+          { name: "Masuaku", rating: 81 },
+          { name: "Salih", rating: 80 },
+          { name: "Gedson", rating: 84 },
+          { name: "Chamberlain", rating: 82 },
+          { name: "Rashica", rating: 83 },
+          { name: "Cenk", rating: 82 },
+          { name: "Aboubakar", rating: 85 }
+        ],
+        subs: [
+          { name: "Ersin", rating: 77 },
+          { name: "Onur", rating: 76 },
+          { name: "Amartey", rating: 78 },
+          { name: "Tayfur", rating: 77 },
+          { name: "Bailly", rating: 80 },
+          { name: "Semih", rating: 81 },
+          { name: "Rebic", rating: 82 },
+          { name: "Demir Ege", rating: 75 }
+        ]
+      }
+    }
+  ]
+};
